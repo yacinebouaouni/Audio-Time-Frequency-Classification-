@@ -1,0 +1,10 @@
+name: audiodetect
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.11.*
+  - pip=24.*
+  - poetry=1.8.*
