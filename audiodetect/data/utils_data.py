@@ -6,6 +6,7 @@
 Requires librosa library for audio processing tasks.
 """
 import librosa
+import numpy as np
 
 def load_audio_file(file_path):
     """load audio from file_path"""
@@ -40,5 +41,5 @@ def compute_log_mel_spectrogram(audio, config):
                                                      fmin=config.MIN_FREQ,
                                                      fmax=config.MAX_FREQ)
     # Compute log Mel spectrogram
-    log_mel_spectrogram = librosa.power_to_db(mel_spectrogram, ref=1.0)
+    log_mel_spectrogram = librosa.power_to_db(mel_spectrogram, ref=np.max)
     return log_mel_spectrogram
