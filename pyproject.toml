@@ -7,6 +7,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+ipykernel = "^6.29.4"
+librosa = "^0.10.1"
+matplotlib = "^3.8.4"
+pandas = "^2.2.2"
+tqdm = "^4.66.2"
+ruff = "^0.4.2"
+omegaconf = "^2.3.0"
 
 
 [build-system]
