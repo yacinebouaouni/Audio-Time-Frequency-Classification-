@@ -14,7 +14,7 @@ class AudioDataset(torch.utils.data.Dataset):
         self.mode = mode
         self.data_dict = self._load_data_dict()
         self.n_classes = len(self.id2label)
-        
+
     def __len__(self):
         return len(self.metadata)
 
@@ -61,7 +61,9 @@ class AudioDataset(torch.utils.data.Dataset):
     @property
     def label2id(self):
         # labels
-        label_list = sorted(os.listdir(os.path.join(self.config.DATA_ROOT, "train_audio")))
+        label_list = sorted(
+            os.listdir(os.path.join(self.config.DATA_ROOT, "train_audio"))
+        )
         label_id_list = list(range(len(label_list)))
         label2id = dict(zip(label_list, label_id_list))
         return label2id
@@ -69,7 +71,9 @@ class AudioDataset(torch.utils.data.Dataset):
     @property
     def id2label(self):
         # labels
-        label_list = sorted(os.listdir(os.path.join(self.config.DATA_ROOT, "train_audio")))
+        label_list = sorted(
+            os.listdir(os.path.join(self.config.DATA_ROOT, "train_audio"))
+        )
         label_id_list = list(range(len(label_list)))
         id2label = dict(zip(label_id_list, label_list))
         return id2label
