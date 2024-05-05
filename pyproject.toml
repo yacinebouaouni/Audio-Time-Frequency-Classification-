@@ -14,6 +14,9 @@ pandas = "^2.2.2"
 tqdm = "^4.66.2"
 ruff = "^0.4.2"
 omegaconf = "^2.3.0"
+pytorch-lightning = "^2.2.4"
+albumentations = "^1.4.6"
+torchvision = "^0.18.0"
 
 
 [build-system]
