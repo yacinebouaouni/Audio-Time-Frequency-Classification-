@@ -14,7 +14,7 @@ WIN_SIZE: 412  # WIN_SIZE of Spec.
 WIN_LAP: 100  # overlap of Spec.
 MIN_FREQ: 40  # min frequency
 MAX_FREQ: 15000  # max frequency
-
+IMG_SIZE: 256 # size of the image
 # == model config ==
 MODEL_TYPE: efficientnet_b0  # model type
 
