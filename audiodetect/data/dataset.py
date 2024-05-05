@@ -13,7 +13,8 @@ class AudioDataset(torch.utils.data.Dataset):
         self.augmentation = augmentation
         self.mode = mode
         self.data_dict = self._load_data_dict()
-
+        self.n_classes = len(self.id2label)
+        
     def __len__(self):
         return len(self.metadata)
 
