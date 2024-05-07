@@ -5,7 +5,7 @@
 import pandas as pd
 import pandas.api.types
 
-import kaggle_metric_utilities
+from . import kaggle_metric_utilities
 
 import sklearn.metrics
 
