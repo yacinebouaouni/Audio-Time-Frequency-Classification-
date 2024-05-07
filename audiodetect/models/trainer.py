@@ -1,10 +1,10 @@
 import pytorch_lightning as pl
-from model import EffNet
-from loss import get_loss
+from .model import EffNet
+from .loss import get_loss
 import torch
 from torch.optim.lr_scheduler import CosineAnnealingWarmRestarts
 from torch import nn
-from metric import score
+from ..metric import score
 import numpy as np
 import pandas as pd
 
@@ -13,6 +13,8 @@ class BirdModel(pl.LightningModule):
     def __init__(self, config, label_list):
         super().__init__()
 
+        # == config ==
+        self.config = config
         # == backbone ==
         self.backbone = EffNet(config.MODEL_TYPE, n_classes=len(label_list))
 
