@@ -2,7 +2,7 @@
 SEED: 2024  # random seed
 DEVICE: cuda  # device to be used
 MIXED_PRECISION: false  # whether to use mixed-16 precision
-OUTPUT_DIR: /kaggle/working/  # output folder
+OUTPUT_DIR: .  # output folder
 
 # == data config ==
 DATA_ROOT: /home/ybouaouni/workspace/Training/CLEF/data/bird-clef-2024  # root folder
@@ -26,10 +26,11 @@ N_WORKERS: 4  # number of workers
 USE_XYMASKING: true  # whether use XYMasking
 
 # == training config ==
-FOLDS: 10  # n fold
-EPOCHS: 15  # max epochs
+CROSS_VALIDATION: true
+FOLDS: 5  # n fold
+EPOCHS: 1  # max epochs
 LR: 0.001  # learning rate
 WEIGHT_DECAY: 1e-5  # weight decay of optimizer
-
+LOSS: cross_entropy
 # == other config ==
 VISUALIZE: true  # whether to visualize data and batch
