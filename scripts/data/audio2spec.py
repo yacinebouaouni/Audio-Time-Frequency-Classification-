@@ -37,7 +37,10 @@ def preprocess(root_path, dst_path, config):
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Process audio files.")
     parser.add_argument(
-        "--root_path", type=str, required=True, help="Path to the root directory of the audio files."
+        "--root_path",
+        type=str,
+        required=True,
+        help="Path to the root directory of the audio files.",
     )
     parser.add_argument(
         "--dst_path",
