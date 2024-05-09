@@ -28,7 +28,7 @@ USE_XYMASKING: true  # whether use XYMasking
 # == training config ==
 CROSS_VALIDATION: true
 FOLDS: 5  # n fold
-EPOCHS: 1  # max epochs
+EPOCHS: 100  # max epochs
 LR: 0.0001  # learning rate
 WEIGHT_DECAY: 1e-5  # weight decay of optimizer
 LOSS: cross_entropy
