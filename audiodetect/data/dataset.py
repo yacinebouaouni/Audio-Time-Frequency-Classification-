@@ -1,6 +1,5 @@
 import torch
 import cv2
-import pandas as pd
 import numpy as np
 
 
@@ -12,10 +11,9 @@ class AudioDataset(torch.utils.data.Dataset):
         self.augmentation = augmentation
         self.mode = mode
 
-        
     def __len__(self):
         return len(self.data_df)
-    
+
     def __getitem__(self, index):
         sample = self.data_df.iloc[index]
 
@@ -26,7 +24,7 @@ class AudioDataset(torch.utils.data.Dataset):
             (self.config.IMG_SIZE, self.config.IMG_SIZE),
             interpolation=cv2.INTER_AREA,
         )
-        
+
         # aug
         if self.augmentation is not None:
             input_spec = self.augmentation(image=input_spec)["image"]

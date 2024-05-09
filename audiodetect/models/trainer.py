@@ -67,7 +67,7 @@ class BirdModel(pl.LightningModule):
         y_pred = self(image)
 
         # == compute loss ==
-        train_loss = self.loss_fn(y_pred, target) #type: ignore
+        train_loss = self.loss_fn(y_pred, target)  # type: ignore
 
         # == record ==
         self.log("train_loss", train_loss, True)
@@ -104,7 +104,7 @@ class BirdModel(pl.LightningModule):
         target_val = torch.cat([x["targets"] for x in outputs], dim=0).cpu().detach()
 
         # = compute validation loss =
-        val_loss = self.loss_fn(output_val, target_val) # type: ignore
+        val_loss = self.loss_fn(output_val, target_val)  # type: ignore
 
         # target to one-hot
         target_val = torch.nn.functional.one_hot(target_val, len(self.label_list))
